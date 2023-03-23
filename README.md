@@ -13,7 +13,9 @@ Download and run the fricking `install.sh` from guide
  ```sh
  wget https://github.com/SteavenBuntu/GUIDE/raw/main/install.sh
 chmod +x install.sh
-./install.sh```
+./install.sh
+```
+
 
  # package manager (PLS DONT)
 
