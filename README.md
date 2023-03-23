@@ -7,14 +7,7 @@ Installing SteavenBuntu isnt hard
 
  # Installtion
 
- Grbe Ubuntu 22.04 Server iso and install it as normal
-
- then
-
- download and run install.sh from https://github.com/SteavenBuntu/SteavenRepos without sudo 
-
- then download and run install.sh from https://github.com/SteavenBuntu/SteavenGnome without sudo
-
+Download and run the fricking `install.sh` from guide
  
 
  # package manager (PLS DONT)
