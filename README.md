@@ -10,6 +10,11 @@ Installing SteavenBuntu isnt hard
 Download and run the fricking `install.sh` from guide
  
 
+ ```sh
+ wget https://github.com/SteavenBuntu/GUIDE/raw/main/install.sh
+chmod +x install.sh
+./install.sh```
+
  # package manager (PLS DONT)
 
  https://github.com/SteavenBuntu/stv
