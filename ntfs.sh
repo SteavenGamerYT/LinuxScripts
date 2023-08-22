@@ -9,7 +9,7 @@ if grep -q 'SUBSYSTEM=="block", ENV{ID_FS_TYPE}=="ntfs", ENV{ID_FS_TYPE}="ntfs3"
  if grep -q '[defaults]
 ntfs_defaults=uid=1000,gid=1000,rw,user,exec,umask=000' /etc/udisks2/mount_options.conf
     then
-            echo "NTFS Mount Options is alraday Configured"
+            echo "NTFS Mount Options is altraday Configured"
     else
             echo '[defaults]
 ntfs_defaults=uid=1000,gid=1000,rw,user,exec,umask=000' | sudo tee -a /etc/udisks2/mount_options.conf
