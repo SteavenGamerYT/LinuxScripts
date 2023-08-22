@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo pacman -Syu --noconfirm distrobox podman
-distrobox-create --name ubuntu --image docker.io/library/ubuntu:latest -y
-distrobox-create --name fedora --image fedora:latest -y
+distrobox-create --name ubuntu --image docker.io/library/ubuntu:latest -Y
+distrobox-create --name fedora --image fedora:latest -Y
 
 echo 'stv-install() {' | sudo tee -a ~/.bashrc
 echo '  if [[ $1 == "-v" ]]; then' | sudo tee -a ~/.bashrc
