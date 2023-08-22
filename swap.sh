@@ -5,5 +5,11 @@ sudo fallocate -l 16G /swapfile
 sudo chmod 0600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
-echo '# Swap' | sudo tee -a /etc/fstab
-echo '/swapfile        none        swap        defaults      0 0' | sudo tee -a /etc/fstab
+if grep -q '# Swap
+/swapfile        none        swap        defaults      0 0' /etc/fstab
+    then
+            echo "NTFS 3 is Alaraday Set as The Default"
+    else
+            echo '# Swap
+/swapfile        none        swap        defaults      0 0' | sudo tee -a /etc/fstab
+ fi
