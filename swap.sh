@@ -8,7 +8,7 @@ sudo swapon /swapfile
 if grep -q '# Swap
 /swapfile        none        swap        defaults      0 0' /etc/fstab
     then
-            echo "NTFS 3 is Alaraday Set as The Default"
+            echo "Swap is alrday at fstab"
     else
             echo '# Swap
 /swapfile        none        swap        defaults      0 0' | sudo tee -a /etc/fstab
