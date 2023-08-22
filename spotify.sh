@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -Syu --noconfirm flatpak
+sudo pacman -Syu --noconfirm --needed flatpak
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install com.spotify.Client -y
 sudo flatpak override --user --filesystem=~/Music com.spotify.Client
