@@ -36,8 +36,7 @@ stv() {
         echo "Command Not Found"
     fi
   fi
-  if [[ $1 == "-v" ]]; then
-    if [[ $2 == "arch" ]]; then' ~/.bashrc
+  }' ~/.bashrc
     then
             echo "stv-install was found in ~/.bashrc"
     else
@@ -74,6 +73,5 @@ stv() {
         echo "Command Not Found"
     fi
   fi
-  if [[ $1 == "-v" ]]; then
-    if [[ $2 == "arch" ]]; then' | sudo tee -a ~/.bashrc
+  }' | sudo tee -a ~/.bashrc
  fi
