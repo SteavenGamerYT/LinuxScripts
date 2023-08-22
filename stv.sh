@@ -1,39 +1,79 @@
 #!/bin/bash
-sudo pacman -Syu --noconfirm distrobox podman
+sudo pacman -Syu --noconfirm --needed distrobox podman
 distrobox-create --name ubuntu --image docker.io/library/ubuntu:latest -Y
 distrobox-create --name fedora --image fedora:latest -Y
-
-echo 'stv-install() {' | sudo tee -a ~/.bashrc
-echo '  if [[ $1 == "-v" ]]; then' | sudo tee -a ~/.bashrc
-echo '    x=$@' | sudo tee -a ~/.bashrc
-echo '    if [[ $2 == "arch" ]]; then' | sudo tee -a ~/.bashrc
-echo '        x=${x/-v arch/}' | sudo tee -a ~/.bashrc
-echo '        sudo pacman $x' | sudo tee -a ~/.bashrc
-echo '    elif [[ $2 == "ubuntu" ]]; then' | sudo tee -a ~/.bashrc
-echo '        x=${x/-v ubuntu/}' | sudo tee -a ~/.bashrc
-echo '        distrobox-enter -H ubuntu -- sudo apt $x' | sudo tee -a ~/.bashrc
-echo '    elif [[ $2 == "fedora" ]]; then' | sudo tee -a ~/.bashrc
-echo '        x=${x/-v fedora/}' | sudo tee -a ~/.bashrc
-echo '        distrobox-enter -H fedora -- sudo dnf $x' | sudo tee -a ~/.bashrc
-echo '    else' | sudo tee -a ~/.bashrc
-echo '        echo "Command Not Found"' | sudo tee -a ~/.bashrc
-echo '    fi' | sudo tee -a ~/.bashrc
-echo '  fi' | sudo tee -a ~/.bashrc
-echo '}' | sudo tee -a ~/.bashrc
-echo 'stv() {' | sudo tee -a ~/.bashrc
-echo '  if [[ $1 == "-v" ]]; then' | sudo tee -a ~/.bashrc
-echo '    x=$@' | sudo tee -a ~/.bashrc
-echo '    if [[ $2 == "arch" ]]; then' | sudo tee -a ~/.bashrc
-echo '        x=${x/-v arch/}' | sudo tee -a ~/.bashrc
-echo '         $x' | sudo tee -a ~/.bashrc
-echo '    elif [[ $2 == "ubuntu" ]]; then' | sudo tee -a ~/.bashrc
-echo '        x=${x/-v ubuntu/}' | sudo tee -a ~/.bashrc
-echo '        distrobox-enter -H ubuntu -- $x' | sudo tee -a ~/.bashrc
-echo '    elif [[ $2 == "fedora" ]]; then' | sudo tee -a ~/.bashrc
-echo '        x=${x/-v fedora/}' | sudo tee -a ~/.bashrc
-echo '        distrobox-enter -H fedora -- $x' | sudo tee -a ~/.bashrc
-echo '    else' | sudo tee -a ~/.bashrc
-echo '        echo "Command Not Found"' | sudo tee -a ~/.bashrc
-echo '    fi' | sudo tee -a ~/.bashrc
-echo '  fi' | sudo tee -a ~/.bashrc
-echo '}' | sudo tee -a ~/.bashrc
+echo " " | sudo tee -a ~/.bashrc
+if grep -q 'stv-install() {
+  if [[ $1 == "-v" ]]; then
+    x=$@
+    if [[ $2 == "arch" ]]; then
+        x=${x/-v arch/}
+        sudo pacman $x
+    elif [[ $2 == "ubuntu" ]]; then
+        x=${x/-v ubuntu/}
+        distrobox-enter -H ubuntu -- sudo apt $x
+    elif [[ $2 == "fedora" ]]; then
+        x=${x/-v fedora/}
+        distrobox-enter -H fedora -- sudo dnf $x
+    else
+        echo "Command Not Found"
+    fi
+  fi
+}
+stv() {
+  if [[ $1 == "-v" ]]; then
+    x=$@
+    if [[ $2 == "arch" ]]; then
+        x=${x/-v arch/}
+         $x
+    elif [[ $2 == "ubuntu" ]]; then
+        x=${x/-v ubuntu/}
+        distrobox-enter -H ubuntu -- $x
+    elif [[ $2 == "fedora" ]]; then
+        x=${x/-v fedora/}
+        distrobox-enter -H fedora -- $x
+    else
+        echo "Command Not Found"
+    fi
+  fi
+  if [[ $1 == "-v" ]]; then
+    if [[ $2 == "arch" ]]; then' ~/.bashrc
+    then
+            echo "stv-install was found in ~/.bashrc"
+    else
+            echo 'stv-install() {
+  if [[ $1 == "-v" ]]; then
+    x=$@
+    if [[ $2 == "arch" ]]; then
+        x=${x/-v arch/}
+        sudo pacman $x
+    elif [[ $2 == "ubuntu" ]]; then
+        x=${x/-v ubuntu/}
+        distrobox-enter -H ubuntu -- sudo apt $x
+    elif [[ $2 == "fedora" ]]; then
+        x=${x/-v fedora/}
+        distrobox-enter -H fedora -- sudo dnf $x
+    else
+        echo "Command Not Found"
+    fi
+  fi
+}
+stv() {
+  if [[ $1 == "-v" ]]; then
+    x=$@
+    if [[ $2 == "arch" ]]; then
+        x=${x/-v arch/}
+         $x
+    elif [[ $2 == "ubuntu" ]]; then
+        x=${x/-v ubuntu/}
+        distrobox-enter -H ubuntu -- $x
+    elif [[ $2 == "fedora" ]]; then
+        x=${x/-v fedora/}
+        distrobox-enter -H fedora -- $x
+    else
+        echo "Command Not Found"
+    fi
+  fi
+  if [[ $1 == "-v" ]]; then
+    if [[ $2 == "arch" ]]; then' | sudo tee -a ~/.bashrc
+ fi
