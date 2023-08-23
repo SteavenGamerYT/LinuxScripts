@@ -2,6 +2,9 @@
 Scripts of SteavenLinux
 # REQUIREMENTS
 ARCH LINUX
+
 SYSTEMD-BOOT
+
 BTRFS
+
 UEFI
