@@ -1,4 +1,5 @@
 #!/bin/bash
+yay -Rns --noconfirm nvidia-prime prime-run
 if grep -q '#!/bin/bash
 export __NV_PRIME_RENDER_OFFLOAD=1
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
