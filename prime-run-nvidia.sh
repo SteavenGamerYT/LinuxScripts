@@ -15,3 +15,4 @@ export __VK_LAYER_NV_optimus=NVIDIA_only
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 exec "$@"' | sudo tee -a /usr/bin/prime-run
  fi
+sudo chmod +x /usr/bin/prime-run
