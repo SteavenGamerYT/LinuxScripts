@@ -1,7 +1,10 @@
 #!/bin/bash
+echo "Installing distrobox and podman"
 sudo pacman -Syu --noconfirm --needed distrobox podman
+echo "Installing ubuntu and fedora to distrobox"
 distrobox-create --name ubuntu --image docker.io/library/ubuntu:latest -Y
 distrobox-create --name fedora --image fedora:latest -Y
+echo "Installing stv to ~/.bashrc"
 echo " " | sudo tee -a ~/.bashrc
 if grep -q 'stv-install() {
   if [[ $1 == "-v" ]]; then
