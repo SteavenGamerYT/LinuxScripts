@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Installing NTFS-3G"
 sudo pacman -Syu --noconfirm --needed ntfs-3g
-echp "Configuring Ntfs as default"
+echp "Configuring Ntfs3 as default"
 if grep -q 'SUBSYSTEM=="block", ENV{ID_FS_TYPE}=="ntfs", ENV{ID_FS_TYPE}="ntfs3"' /etc/udev/rules.d/ntfs3_by_default.rules
     then
             echo "NTFS 3 is Alaraday Set as The Default"

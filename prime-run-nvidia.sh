@@ -18,4 +18,5 @@ export __VK_LAYER_NV_optimus=NVIDIA_only
 export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 exec "$@"' | sudo tee -a /usr/local/bin/prime-run
  fi
+echo "Making /usr/local/bin/prime-run exutuable"
 sudo chmod +x /usr/local/bin/prime-run
