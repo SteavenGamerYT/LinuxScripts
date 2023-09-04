@@ -1,7 +1,7 @@
 # SteavenGamerYT'S Linux's Scripts
 Arch Linux Scripts to Automade Some Things! 
  
-# REQUIREMENTS
+# Requirements
 Arch Linux
 
 Btrfs
