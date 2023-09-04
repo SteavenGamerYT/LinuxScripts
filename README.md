@@ -1,10 +1,9 @@
-# Scripts
-Scripts of SteavenLinux
+# SteavenGamerYT'S Linux's Scripts
+Arch Linux Scripts to Automade Some Things! 
+ 
 # REQUIREMENTS
-ARCH LINUX
+Arch Linux
 
-SYSTEMD-BOOT
+Btrfs
 
-BTRFS
-
-UEFI
+Systemd-Boot + UEFI
