@@ -17,3 +17,13 @@ sudo flatpak override --filesystem=xdg-config/qt6ct:ro
 sudo flatpak override --filesystem=xdg-config/Kvantum:ro
 sudo flatpak override --filesystem=xdg-config/fontconfig:ro
 sudo flatpak override --filesystem=xdg-config/MangoHud:ro
+
+flatpak override --filesystem=~/.themes
+flatpak override --filesystem=~/.icons
+flatpak override --filesystem=xdg-config/gtk-3.0:ro
+flatpak override --filesystem=xdg-config/gtk-4.0:ro
+flatpak override --filesystem=xdg-config/qt5ct:ro
+flatpak override --filesystem=xdg-config/qt6ct:ro
+flatpak override --filesystem=xdg-config/Kvantum:ro
+flatpak override --filesystem=xdg-config/fontconfig:ro
+flatpak override --filesystem=xdg-config/MangoHud:ro
