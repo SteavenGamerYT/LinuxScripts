@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Removing Prime packages from pacman"
-sudo pacman -Rns --noconfirm nvidia-prime prime-run
+sudo pacman -Rns --noconfirm nvidia-prime
 echo "Adding prime-run in /urs/local/bin/prime-run'
 if grep -q '#!/bin/bash
 export __NV_PRIME_RENDER_OFFLOAD=1
