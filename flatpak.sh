@@ -44,6 +44,8 @@ install_packages "$distro" || {
     exit 1
 }
 
+install_packages "$distro"
+
 # Add Flathub repository
 echo "Adding Flathub to Flatpak"
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
