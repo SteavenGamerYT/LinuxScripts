@@ -15,11 +15,11 @@ install_packages() {
             ;;
         fedora)
             echo "Installing NTFS-3G for Fedora"
-            sudo dnf install ntfs-3g udisks2
+            sudo dnf install ntfs-3g udisks2 -y
             ;;
         debian|ubuntu)
             echo "Installing NTFS-3G for Debian/Ubuntu"
-            sudo apt install ntfs-3g
+            sudo apt install ntfs-3g -y
             ;;
         *)
             echo "Unsupported distribution: $distro"

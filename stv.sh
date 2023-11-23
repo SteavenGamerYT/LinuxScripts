@@ -15,11 +15,11 @@ install_packages() {
             ;;
         fedora)
             echo "Installing Distrobox and podman for Fedora"
-            sudo dnf install distrobox podman
+            sudo dnf install distrobox podman -y
             ;;
         debian|ubuntu)
             echo "Installing Distrobox and podman for Debian/Ubuntu"
-            sudo apt install distrobox podman
+            sudo apt install distrobox podman -y
             ;;
         *)
             echo "Unsupported distribution: $distro"

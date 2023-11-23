@@ -15,11 +15,11 @@ install_packages() {
             ;;
         fedora)
             echo "Installing Flatpak for Fedora"
-            sudo dnf install flatpak
+            sudo dnf install flatpak -y
             ;;
         debian|ubuntu)
             echo "Installing Flatpak for Debian/Ubuntu"
-            sudo apt install flatpak
+            sudo apt install flatpak -y
             ;;
         *)
             echo "Unsupported distribution: $distro"
