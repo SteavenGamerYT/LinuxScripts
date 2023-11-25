@@ -54,7 +54,6 @@ else
     echo "No NVIDIA GPU found"
     NVIDIA_FLAG=""
 fi
-arch:latest
 echo "Installing ubuntu and fedora to distrobox"
 distrobox-create --name ubuntu --image docker.io/library/ubuntu:latest $NVIDIA_FLAG -Y
 distrobox-create --name fedora --image fedora:latest $NVIDIA_FLAG -Y
