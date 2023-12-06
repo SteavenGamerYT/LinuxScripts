@@ -21,6 +21,10 @@ install_packages() {
             echo "Installing NTFS-3G for Debian/Ubuntu"
             sudo apt install ntfs-3g -y
             ;;
+        opensuse)
+            echo "Installing NTFS-3G for openSUSE"
+            sudo zypper install ntfs-3g -y
+            ;;
         *)
             echo "Unsupported distribution: $distro"
             exit 1

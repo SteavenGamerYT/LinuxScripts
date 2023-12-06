@@ -21,6 +21,10 @@ install_packages() {
             echo "Installing Flatpak for Debian/Ubuntu"
             sudo apt install flatpak -y
             ;;
+        opensuse)
+            echo "Installing Flatpak for openSUSE"
+            sudo zypper install flatpak -y
+            ;;
         *)
             echo "Unsupported distribution: $distro"
             exit 1
@@ -43,8 +47,6 @@ install_packages "$distro" || {
     echo "Error: Flatpak installation failed."
     exit 1
 }
-
-install_packages "$distro"
 
 # Add Flathub repository
 echo "Adding Flathub to Flatpak"

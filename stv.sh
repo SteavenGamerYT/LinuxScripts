@@ -21,6 +21,10 @@ install_packages() {
             echo "Installing Distrobox and podman for Debian/Ubuntu"
             sudo apt install distrobox podman -y
             ;;
+        opensuse)
+            echo "Installing Distrobox and podman for openSUSE"
+            sudo zypper install distrobox podman -y
+            ;;
         *)
             echo "Unsupported distribution: $distro"
             exit 1
@@ -76,6 +80,9 @@ else
         elif [[ $2 == "fedora" ]]; then
             x=${x/-v fedora/}
             distrobox-enter -H fedora -- sudo dnf $x
+        elif [[ $2 == "opensuse" ]]; then
+            x=${x/-v opensuse/}
+            distrobox-enter -H opensuse -- sudo zypper $x
         else
             echo "Command Not Found"
         fi
@@ -94,6 +101,9 @@ stv() {
         elif [[ $2 == "fedora" ]]; then
             x=${x/-v fedora/}
             distrobox-enter -H fedora -- $x
+        elif [[ $2 == "opensuse" ]]; then
+            x=${x/-v opensuse/}
+            distrobox-enter -H opensuse -- $x
         else
             echo "Command Not Found"
         fi
