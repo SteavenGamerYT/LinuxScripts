@@ -62,6 +62,7 @@ echo "Installing ubuntu and fedora to distrobox"
 distrobox-create --name ubuntu --image docker.io/library/ubuntu:latest $NVIDIA_FLAG -Y
 distrobox-create --name fedora --image fedora:latest $NVIDIA_FLAG -Y
 distrobox-create --name arch --image docker.io/library/archlinux:latest $NVIDIA_FLAG -Y
+distrobox-create --name opensuse --image registry.opensuse.org/opensuse/tumbleweed:latest $NVIDIA_FLAG -Y
 
 echo "Installing stv to ~/.bashrc"
 
